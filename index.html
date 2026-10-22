@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Bath Fixture Company</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        a {text-decoration: none;color: #222;}
+        a:hover {text-decoration: underline;}
+        .banner-wrap{width:100%;}
+        .banner-desktop{width:100%;display:block;object-fit:cover;}
+        .banner-mobile{width:100%;display:none;object-fit:cover;}
+        .container {max-width: 1200px;margin: 0 auto;padding: 0 20px;}
+        header {padding: 24px 0;text-align: center;}
+        .header-title {font-size: 22px;font-weight: 700;color: #222;}
+        .contact-wrap {display: grid;grid-template-columns: 1fr 360px;gap: 48px;padding: 30px 0 60px;}
+        .form-title {font-size: 18px;font-weight: 600;margin-bottom: 10px;color: #111;}
+        .form-desc {font-size: 14px;color: #555;margin-bottom: 24px;line-height: 1.5;}
+        .form-group {margin-bottom: 18px;}
+        .form-group label {display: block;font-size: 14px;margin-bottom: 6px;color: #222;}
+        .form-group input,.form-group textarea {
+            width: 100%;padding: 12px 14px;border: 1px solid #ddd;font-size: 15px;outline: none;transition: border 0.2s ease;
+        }
+        .form-group input:focus,.form-group textarea:focus {border-color: #333;}
+        .form-group textarea {min-height: 140px;resize: vertical;}
+        .btn-send {width: 100%;background-color: #000;color: white;border: none;padding: 14px;font-size: 15px;cursor: pointer;opacity: 1;transition: opacity 0.2s;}
+        .btn-send:hover {opacity: 0.85;}
+        .info-block h3 {font-size: 17px;font-weight: 600;margin-bottom: 20px;}
+        .info-item {display: flex;gap: 10px;margin-bottom: 14px;font-size: 14px;color: #444;line-height: 1.6;}
+        .info-item .material-icons {font-size: 18px;color: #222;flex-shrink: 0;margin-top: 2px;}
+        .info-divider {height: 1px;background: #ddd;margin: 22px 0;}
+        .copyright {text-align: center;font-size: 13px;color: #666;padding: 20px 0;border-top: 1px solid #eee;}
+        #form-status {margin-top:12px;font-size:14px;}
+        @media (max-width:768px) {
+            .contact-wrap {grid-template-columns: 1fr;gap: 36px;}
+            .banner-desktop{display:none;}
+            .banner-mobile{display:block;}
+        }
+        @media (max-width:480px) {
+            .info-item {align-items: flex-start;}
+        }
+    </style>
+</head>
+<body>
+    <div class="banner-wrap">
+        <img class="banner-desktop" src="https://cdn.shopify.com/s/files/1/0692/2436/6337/files/bath_fixtures_contact_banner.png?v=1792657871" alt="Contact banner">
+        <img class="banner-mobile" src="https://cdn.shopify.com/s/files/1/0692/2436/6337/files/bath_fixtures_contact_us_banner.png?v=1792657871" alt="Contact banner">
+    </div>
+    <div class="container">
+        <header>
+            <div class="header-title">NEED ANY HELP?</div>
+        </header>
+        <section class="contact-wrap">
+            <div class="form-col">
+                <h2 class="form-title">Send Us A Message</h2>
+                <p class="form-desc">Have a question or need support? Fill out the form below, or contact us directly by phone or email.</p>
+                <form id="contactForm" action="https://api.staticforms.dev/submit" method="POST">
+                    <input type="hidden" name="apiKey" value="sf_0388c6a9b1ee105498f46b35" />
+                    <input type="hidden" name="subject" value="contact-bath fixture submission" />
+                    <div class="form-group">
+                        <label for="name">Your Name*</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number*</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="Phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address*</label>
+                        <input type="email" id="email" name="email" required placeholder="your@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Comment*</label>
+                        <textarea id="comment" name="message" required placeholder="Leave your comment here..."></textarea>
+                    </div>
+                    <button class="btn-send" type="submit">Submit</button>
+                    <div id="form-status"></div>
+                </form>
+            </div>
+            <div class="info-col">
+                <div class="info-block">
+                    <h3>Contact Info</h3>
+                    <p class="form-desc">We’re here to help. Find our contact information below:</p>
+                    <div class="info-item">
+                        <span class="material-icons">call</span>
+                        <span>Customer Service Phone: +1 844 465 0168</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="material-icons">schedule</span>
+                        <span>Monday to Friday: 8 AM - 5 PM PST</span>
+                    </div>
+                    <div class="info-divider"></div>
+                    <div class="info-item">
+                        <span class="material-icons">email</span>
+                        <span>Email: After-sale-service-QA@outlook.com</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="material-icons">schedule</span>
+                        <span>You can expect a reply within 24 business hours.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="copyright">© 2026, Bath Fixture Company. All Rights Reserved.</div>
+<script>
+const form = document.getElementById('contactForm');
+const statusEl = document.getElementById('form-status');
+form.addEventListener('submit', async e => {
+    e.preventDefault();
+    statusEl.textContent = "";
+    const formData = new FormData(form);
+    try {
+        const res = await fetch(form.action, {
+            method: form.method,
+            body: formData
+        });
+        const result = await res.json();
+        if (res.ok) {
+            alert('Your message has been submitted successfully! We will get back to you within 24 business hours.');
+            statusEl.textContent = "Message sent successfully!";
+            form.reset();
+        } else {
+            statusEl.textContent = result?.message || 'Submit failed! Please try again later.';
+            alert('Submit failed! Please try again later.');
+        }
+    } catch (err) {
+        statusEl.textContent = err.message;
+        alert('Submit failed! Please try again later.');
+    }
+})
+</script>
+</body>
+</html>
+<!-- （注：内容由AI生成） -->
